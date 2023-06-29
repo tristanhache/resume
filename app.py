@@ -7,6 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("//fr")
+@app.route("/fr")
 def indexfr():
     return render_template("indexfr.html")
