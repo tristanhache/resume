@@ -9,4 +9,4 @@ def index():
 
 @app.route("/fr")
 def indexfr():
-    return render_template("indexfr.html")
+    return render_template("indexFr.html")
