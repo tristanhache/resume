@@ -1,308 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Tristan Haché - Resume</title>
-    <!-- Add Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Add your custom CSS here -->
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        /* Styling for the introduction section */
-        .intro-section {
-            background-color: #f8f8f8;
-            padding: 50px 0;
-        }
-
-        .intro-section h3 {
-            color: #007bff;
-        }
-
-        /* Styling for the experience section */
-        .experience-section {
-            background-color: #f0f0f0;
-            padding: 50px 0;
-        }
-
-        .experience-section h3 {
-            color: #333;
-        }
-
-        /* Styling for the testimonials section */
-        .testimonials-section {
-            background-color: #f8f8f8;
-            padding: 50px 0;
-        }
-
-        .testimonials-section h3 {
-            color: #007bff;
-        }
-
-        /* Styling for the FAQ section */
-        .faq-section {
-            background-color: #f0f0f0;
-            padding: 50px 0;
-        }
-
-        .faq-section h3 {
-            color: #333;
-        }
-
-        /* Styling for the contact section */
-        .contact-section {
-            background-color: #f8f8f8;
-            padding: 50px 0;
-        }
-
-        .contact-section h3 {
-            color: #007bff;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristan Haché - CV</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Tristan Haché</h1>
+        <address>
+            2163 Rue Mousseau<br>
+            H1L 4V2 Montréal<br>
+            Phone: (438)-928-1646<br>
+            Email: tristanhache2009@gmail.com
+        </address>
+    </header>
 
-    <!-- MENU BAR -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-
-            <a class="navbar-brand" href="#">
-                Tristan Haché
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a href="#intro" class="nav-link smoothScroll">Introduction</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#testimonials" class="nav-link smoothScroll">Reviews</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="#" class="custom-btn btn" download>Download CV</a>
-                </div>
-            </div>
-
-        </div>
-    </nav>
-
-    <section class="intro-section section-padding" id="intro">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <h3 class="mb-4">Who am I?</h3>
-
-                    <p>I am a highly motivated and versatile individual with experience in content creation and digital
-                        marketing. Currently working as a Video Editor and Content Creator at Nuweb Marketing Inc., I
-                        excel in creating engaging digital content, verifying texts, and designing graphics. I have a
-                        strong academic foundation, having completed Secondary I & II at Collège Saint-Jean-Vianney,
-                        with a concentration in Sciences. I have also gained valuable skills in teamwork, project
-                        management, and organization through my summer internship at Studio XP, a game development
-                        center. I am actively involved in my community, volunteering at Collège St-Jean-Vianney,
-                        assisting with sports complex reception and vaccination passport scanning, as well as supporting
-                        educators and maintaining the daycare facility at Garderie Monde Tweety. Additionally, I hold a
-                        Gardiens Avertis certification and possess web development skills in HTML & CSS, as well as
-                        graphic design proficiency in Figma. Fluent in both French and English, I am eager to contribute
-                        my skills and knowledge to new challenges and opportunities.</p>
-                </div>
-
-                <div class="col-lg-5 mx-auto col-md-6 col-12">
-                    <img src="{{ url_for('static', filename='images/tristan.png') }}" class="about-image img-fluid"
-                        alt="Tristan Haché">
-                    <ul class="mt-4 mb-5 mb-lg-0 profile-list list-unstyled">
-                        <li><strong>Full Name :</strong> Tristan Haché </li>
-
-                        <li><strong>Date of Birth:</strong> 16 Juin 2009</li>
-
-                        <li><strong>Email :</strong> tristanhache2009@gmail.com</li>
-
-                        <li><strong>Phone Number :</strong> (438)-928-1646</li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="row about-third">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <h3>Nuweb Marketing</h3>
-                    <p>Monteur vidéo, création de contenu numérique, vérification de textes, création graphique.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <h3>Studio XP</h3>
-                    <p>Centre de développement de jeux vidéo. Habiletés acquises: travail d’équipe, gestion de projet,
-                        organisation du travail, partage de connaissances.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <h3>CSJV</h3>
-                    <p>Secondaire I & II complété. Concentration Sciences - Camp scientifique avec Yannick Bergeron</p>
-                </div>
-            </div>
-        </div>
+    <!-- Experience Section -->
+    <section>
+        <h2>Experience</h2>
+        <p><strong>Nuweb marketing inc. — Créateur de contenu</strong></p>
+        <p>Juin 2023 À AUJOURD'HUI</p>
+        <ul>
+            <li>Monteur vidéo, création de contenu numérique, vérification de textes, création graphique.</li>
+        </ul>
     </section>
 
+    <!-- Academic Section -->
+    <section>
+        <h2>Formation Académique</h2>
+        <p><strong>Collège Saint-Jean-Vianney - Primaire & Secondaire</strong></p>
+        <p>Septembre 2019 à juin 2026</p>
+        <ul>
+            <li>Secondaire I & II complété.</li>
+            <li>Concentration Sciences - Camp scientifique avec Yannick Bergeron.</li>
+        </ul>
 
-
-    <!-- TESTIMONIAL -->
-    <section class="testimonials-section section-padding" id="testimonials">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12">
-                    <h3 class="mb-5 text-center">What People say</h3>
-
-                    <div class="owl-carousel owl-theme" id="testimonials-carousel">
-                        <div class="item">
-                            <div class="testimonials-thumb d-flex">
-                                <div class="testimonials-image">
-                                    <img src="{{ url_for('static', filename='images/testimonials/testimonial-image01.png') }}"
-                                        class="img-fluid" alt="testimonials image">
-                                </div>
-
-                                <div class="testimonials-info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi mi. </p>
-
-                                    <h6 class="mb-0">Jean-François Haché</h6>
-                                    <span>Nuweb Marketing Founder</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Add more testimonials here -->
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+        <p><strong>Studio XP</strong></p>
+        <p>Été 2022</p>
+        <ul>
+            <li>Centre de développement de jeux vidéo.</li>
+            <li>Habiletés acquises: travail d’équipe, gestion de projet, organisation du travail, partage de connaissances.</li>
+        </ul>
     </section>
 
+    <!-- Community Involvement Section -->
+    <section>
+        <h2>Implications Communautaires</h2>
+        <p><strong>Collège St-Jean-Vianney</strong></p>
+        <ul>
+            <li>Accueil complexe sportif CSJV</li>
+            <li>Scan de passeports vaccinal</li>
+        </ul>
 
-    <!-- FAQ -->
-    <section class="faq-section section-padding">
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12 col-12">
-
-                    <h3 class="mb-5">Frequently Asked Questions</h3>
-
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Are those HTML templates absolutely free for any kind of usage?
-                                    </button>
-                                </h2>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p>Yes, they are 100% free and there is no hidden charge.</p>
-
-                                    <p>They can be used for your commercial websites.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Add more FAQ items here -->
-
-                    </div>
-
-                    <span class="faq-info-text">Please send us a message if you have anything to say. Send an email
-                        message to <strong>contact (at) tooplate (dot) com</strong></span>
-
-                </div>
-
-            </div><!-- col -->
-        </div><!-- row -->
+        <p><strong>Garderie Monde Tweety</strong></p>
+        <ul>
+            <li>Aide aux éducatrices</li>
+            <li>Animation</li>
+            <li>Entretien</li>
+        </ul>
     </section>
 
-
-    <section class="contact-section section-padding pt-0" id="contact">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <form action="tristanhache2009@gmail.com" method="get" class="contact-form webform" role="form">
-
-                        <div class="form-group d-flex flex-column-reverse">
-                            <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="Your Name">
-
-                            <label for="cf-name" class="webform-label">Full Name</label>
-                        </div>
-
-                        <div class="form-group d-flex flex-column-reverse">
-                            <input type="email" class="form-control" name="cf-email" id="cf-email"
-                                placeholder="Your Email">
-
-                            <label for="cf-email" class="webform-label">Your Email</label>
-                        </div>
-
-                        <div class="form-group d-flex flex-column-reverse">
-                            <textarea class="form-control" rows="5" name="cf-message" id="cf-message"
-                                placeholder="Your Message"></textarea>
-
-                            <label for="cf-message" class="webform-label">Message</label>
-                        </div>
-
-                        <button type="submit" class="form-control" id="submit-button" name="submit">Send</button>
-                    </form>
-                </div>
-
-                <div class="mx-auto col-lg-4 col-md-6 col-12">
-                    <h3 class="my-4 pt-4 pt-lg-0">Say hello</h3>
-
-                    <p class="mb-1">(438)-928-1646</p>
-
-                    <p>
-                        <a href="#">
-                            tristanhache2009@gmail.com
-                            <i class="fas fa-arrow-right custom-icon"></i>
-                        </a>
-                    </p>
-
-                    <ul class="social-links mt-2">
-                        <li><a href="https://www.facebook.com/profile.php?id=100082921530167" rel="noopener"
-                                class="fa-brands fa-facebook"></a></li>
-                        <li><a href="https://twitter.com/tristanh42" rel="noopener" class="fab fa-twitter"></a></li>
-                        <li><a href="https://www.instagram.com/tristanh.42/" rel="noopener"
-                                class="fa-brands fa-instagram"></a></li>
-                    </ul>
-
-                    <p class="copyright-text mt-5 pt-3">Copyright &copy; 2023 Tristan Haché</p>
-
-                </div>
-
-            </div>
-        </div>
+    <!-- Additional Skills Section -->
+    <section>
+        <h2>Compétences Supplémentaires</h2>
+        <p>Gardiens avertis — 2020</p>
     </section>
 
-    <!-- Add Bootstrap and other required JS scripts here -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <!-- Skills Section -->
+    <section>
+        <h2>Compétences</h2>
+        <ul>
+            <li>Développeur Web (HTML & CSS)</li>
+            <li>Graphic Designer (Figma)</li>
+        </ul>
+    </section>
+
+    <!-- Languages Section -->
+    <section>
+        <h2>Langues</h2>
+        <ul>
+            <li>Français (Langue principale)</li>
+            <li>Anglais</li>
+        </ul>
+    </section>
 
 </body>
 
