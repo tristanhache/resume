@@ -12,5 +12,5 @@ def indexfr():
     return render_template("indexFr.html")
 
 @app.route("/gpt")
-def indexfr():
+def indexgpt():
     return render_template("indexgpt.html")
