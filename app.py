@@ -10,3 +10,7 @@ def index():
 @app.route("/fr")
 def indexfr():
     return render_template("indexFr.html")
+
+@app.route("/gpt")
+def indexfr():
+    return render_template("indexgpt.html")
