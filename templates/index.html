@@ -1,252 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-     <title>Tristan Haché - Resume</title>
-
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="Tooplate">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
-     <script src="https://kit.fontawesome.com/790e80418f.js" crossorigin="anonymous"></script>
-
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Tristan Resume</title>
 </head>
-
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-
-    <!-- MENU BAR -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-
-            <a class="navbar-brand" href="#">
-                Tristan Haché
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a href="#intro" class="nav-link smoothScroll">Introduction</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#testimonials" class="nav-link smoothScroll">Reviews</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a download="cv.pdf" href="#" class="custom-btn btn" download>Download CV</a>
-                </div>
+<body>
+    <header>
+        <nav>
+            <h1>Tristan Resume</h1>
+            <div id="menu-toggle" class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
+            <ul id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        </div>
-    </nav>
+    <section id="about">
 
-    <section class="about section-padding" id="intro">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6 col-12">
-                    <h3 class="mb-4">Who am I?</h3>
-            
-                    <p>I am a highly motivated and versatile individual with experience in content creation and digital marketing. 
-                      Currently working as a Video Editor and Content Creator at Nuweb Marketing Inc., I excel in creating engaging digital content, verifying texts, and designing graphics. 
-                      I have a strong academic foundation, having completed Secondary I & II at Collège Saint-Jean-Vianney, with a concentration in Sciences. 
-                      I have also gained valuable skills in teamwork, project management, and organization through my summer internship at Studio XP, a game development center. 
-                      I am actively involved in my community, volunteering at Collège St-Jean-Vianney, assisting with sports complex reception and vaccination passport scanning, 
-                      as well as supporting educators and maintaining the daycare facility at Garderie Monde Tweety. 
-                      Additionally, I hold a Gardiens Avertis certification and possess web development skills in HTML & CSS, as well as graphic design proficiency in Figma. 
-                      Fluent in both French and English, I am eager to contribute my skills and knowledge to new challenges and opportunities.</p>
-
-
-                </div>
-
-                <div class="col-lg-5 mx-auto col-md-6 col-12">
-                    <img src="{{ url_for('static', filename='images/tristan.png') }}" class="about-image img-fluid" alt="Picture of Myself">
-                    <ul class="mt-4 mb-5 mb-lg-0 profile-list list-unstyled">
-                      <li><strong>Full Name :</strong> Tristan Haché </li>
-
-                      <li><strong>Date of Birth:</strong> 16 Juin 2009</li>
-
-                      <li><strong>Email :</strong> tristanhache2009@gmail.com</li>
-
-                      <li><strong>Phone Number :</strong> (438)-928-1646</li>
-                  </ul>
-                </div>
-
-                
-
-            </div>
-            <div class="row about-third">
-            	<div class="col-lg-4 col-md-4 col-12">
-                <h3>Nuweb Marketing</h3>
-                <p>Video editor, digital content creation, text verification, graphic design.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                <h3>Studio XP</h3>
-                <p>Video game development center. Skills acquired: teamwork, project management, work organization, knowledge sharing.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                <h3>CSJV</h3>
-                <p>Secondary I & II completed. Concentration Sciences - Science camp with Yannick Bergeron</p>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <!-- TESTIMONIAL -->
-     <section class="testimonials section-padding" id="testimonials">
-          <div class="container">
-               <div class="row">
+    <section id="experience">
 
-                    <div class="col-12">
-                        <h3 class="mb-5 text-center">What People say</h3>
-
-                        <div class="owl-carousel owl-theme" id="testimonials-carousel">
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{{ url_for('static', filename='images/testimonials/testimonial-image01.png') }}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Tristan is a great per</p>
-
-                                        <h6 class="mb-0">Jean-François Haché</h6>
-                                        <span>Nuweb Marketing Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{{ url_for('static', filename='images/testimonials/basic_person.png') }}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi mi. </p>
-
-                                        <h6 class="mb-0">*name*</h6>
-                                        <span>*position*</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{{ url_for('static', filename='images/testimonials/basic_person.png') }}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi mi. </p>
-
-                                        <h6 class="mb-0">*name*</h6>
-                                        <span>*position*</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="testimonials-thumb d-flex">
-                                    <div class="testimonials-image">
-                                        <img src="{{ url_for('static', filename='images/testimonials/basic_person.png') }}" class="img-fluid" alt="testimonials image">
-                                    </div>
-
-                                    <div class="testimonials-info">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisi mi. </p>
-
-                                        <h6 class="mb-0">*name*</h6>
-                                        <span>*position*</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-               </div>
-          </div>
-
-
-
-     <section class="contact section-padding pt-0" id="contact">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-6 col-md-6 col-12">
-            <form action="tristanhache2009@gmail.com" method="get" class="contact-form webform"  role="form">
-                
-                <div class="form-group d-flex flex-column-reverse">
-                    <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="Your Name">
-
-                    <label for="cf-name" class="webform-label">Full Name</label>
-                </div>
-
-                <div class="form-group d-flex flex-column-reverse">
-                    <input type="email" class="form-control" name="cf-email" id="cf-email" placeholder="Your Email">
-
-                    <label for="cf-email" class="webform-label">Your Email</label>
-                </div>
-
-                <div class="form-group d-flex flex-column-reverse">
-                    <textarea class="form-control" rows="5" name="cf-message" id="cf-message" placeholder="Your Message"></textarea>
-
-                    <label for="cf-message" class="webform-label">Message</label>
-                </div>
-
-                <button type="submit" class="form-control" id="submit-button" name="submit">Send</button>
-            </form>
-          </div>
-
-            <div class="mx-auto col-lg-4 col-md-6 col-12">
-                <h3 class="my-4 pt-4 pt-lg-0">Say hello</h3>
-
-                <p class="mb-1">(438)-928-1646</p>
-
-                <p>
-                    <a href="#">
-                        tristanhache2009@gmail.com
-                    <i class="fas fa-arrow-right custom-icon"></i>
-                    </a>
-                </p>
-
-                <ul class="social-links mt-2">
-                    <li><a href="https://www.facebook.com/profile.php?id=100082921530167" rel="noopener" class="fa-brands fa-facebook"></a></li>
-                    <li><a href="https://twitter.com/tristanh42" rel="noopener" class="fab fa-twitter"></a></li>
-                    <li><a href="https://www.instagram.com/tristanh.42/" rel="noopener" class="fa-brands fa-instagram"></a></li>
-                </ul>
-                
-              <p class="copyright-text mt-5 pt-3">Copyright &copy; 2023 Tristan Haché</p>
-              
-            </div>
-
-        </div>
-      </div>
     </section>
-     <!-- SCRIPTS -->
-     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-     <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
-     <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
-     <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
 
+    <section id="contact">
+
+    </section>
+
+    <section id="reviews">
+
+    </section>
 </body>
 </html>
